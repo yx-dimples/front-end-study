@@ -1,0 +1,12 @@
+#div0 div{
+    width: 33.3%;
+}
+#div0 div:nth-child(1){
+    background: red;
+}
+#div0 div:nth-child(2){
+    background: blue;
+}
+#div0 div:nth-child(3){
+    background: green;
+}

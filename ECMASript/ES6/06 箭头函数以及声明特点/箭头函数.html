@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+    <script>
+        // function getName() {
+        //     console.log(this.name);
+        // }
+        //
+        // let getName2 = () =>{
+        //     console.log(this.name);
+        // }
+        //
+        // window.name = '尚硅谷';
+        // const school = {
+        //     name: 'ATGUIGU'
+        // };
+
+        // getName();
+        // getName2();
+        //
+        // getName.call(school);
+        // getName2.call(school);
+
+        // let Person = (name , age) =>{
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // let me = new Person('yang',19);
+        // console.log(me)
+
+        // let fn = () =>{
+        //     console.log(arguments);
+        // }
+        // fn(1,2,3);
+
+        let add = n =>{
+            return n + n;
+        }
+        console.log(add(9))
+
+        let pow = n => n*n;
+        console.log(pow(9))
+    </script>
+
+</body>
+</html>

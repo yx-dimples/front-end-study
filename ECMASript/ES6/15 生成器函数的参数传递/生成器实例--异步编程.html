@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成器实例--异步编程</title>
+</head>
+<body>
+    <script>
+        //异步编程 文件操作 网络操作（ajax，request）数据操作
+        //需求：1s 控制台输出 111，2s 控制台输出 2222,3s 控制台输出 333
+
+        //原始
+        /*setTimeout(() =>{
+            console.log("111");
+            setTimeout(() =>{
+                console.log("222");
+                setTimeout(() =>{
+                    console.log("333");
+                },3000)
+            },2000)
+        },1000);*/
+
+        //生成器
+        function one() {
+            setTimeout(() =>{
+                console.log("111");
+            },1000)
+        }
+        function two() {
+            setTimeout(() =>{
+                console.log("222");
+            },2000)
+        }
+        function three() {
+            setTimeout(() =>{
+                console.log("333");
+            },3000)
+        }
+        function * gen() {
+            yield one();
+            yield two();
+            yield three();
+        }
+        let internal = gen();
+        internal.next();
+        internal.next();
+        internal.next();
+    </script>
+</body>
+</html>

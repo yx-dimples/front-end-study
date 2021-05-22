@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.fromEntries</title>
+</head>
+<body>
+    <script>
+        // const result = Object.fromEntries([
+        //     ['name','尚硅谷'],
+        //     ['xueke','前端,Java,大数据,云计算']
+        // ]);
+
+        const m = new Map();
+        m.set('name','ATGUIGU');
+        const result = Object.fromEntries(m);
+        console.log(result);
+    </script>
+</body>
+</html>

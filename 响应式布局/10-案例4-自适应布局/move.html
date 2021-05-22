@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div0{
+            display: flex;
+        }
+        #div0 div:first-child{
+            background: yellow;
+            flex: 0 0 50px;
+        }
+        #div0 div:first-child(2){
+            background: red;
+            flex: 1 1 auto;
+        }
+        #div0 div:first-child(3){
+            background: yellow;
+            flex: 0 0 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="div0">
+    <div>1</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+</body>
+</html>

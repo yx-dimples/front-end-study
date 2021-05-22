@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义遍历数据</title>
+</head>
+<body>
+    <script>
+        //声明一个对象
+        const banji = {
+            name: '终极一班',
+            stu: [
+                '小王',
+                '小明',
+                '小李',
+                '小二'
+            ],
+            [Symbol.iterator](){
+                //索引遍历
+                let index = 0;
+                //保存 this 的值
+                let _this = this;
+                return{
+                    next: function () {
+                        if(index < _this.stu.length){
+                            const result = {value: _this.stu[index], done: false};
+                            //下标自增
+                            index++;
+                            return result;
+                        }else{
+                            return {value: undefined, done: true};
+                        }
+
+                    }
+                }
+            }
+        };
+        //遍历这个对象
+        for (let v of banji){
+            console.log(v);
+        }
+
+        //使用for...of遍历，使得每一次返回的结果，是数组的一个成员
+    </script>
+
+</body>
+</html>

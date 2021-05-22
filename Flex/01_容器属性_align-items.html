@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .box{
+            display: flex;
+            width: 350px;
+            height: 100px;
+            border: 1px solid black;
+            align-items: flex-start;
+        }
+        .box1{
+            display: flex;
+            width: 350px;
+            height: 100px;
+            border: 1px solid black;
+            align-items: flex-end;
+        }
+        .box2{
+            display: flex;
+            width: 350px;
+            height: 100px;
+            border: 1px solid black;
+            align-items: center;
+        }
+        .box3{
+            display: flex;
+            width: 350px;
+            height: 100px;
+            border: 1px solid black;
+            align-items: stretch;
+        }
+        .box4{
+            display: flex;
+            width: 350px;
+            height: 100px;
+            border: 1px solid black;
+            align-items: baseline;
+        }
+        .item{
+            background: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<p>align-items: flex-start;</p>
+<div class="box">
+    <div class="item" style="height: 50px;width: 20px">1</div>
+    <div class="item" style="height: 80px;width: 20px">2</div>
+    <div class="item" style="height: 50px;width: 20px">3</div>
+    <div class="item" style="height: 70px;width: 20px">4</div>
+</div>
+<p>align-items: flex-end;</p>
+<div class="box1">
+    <div class="item" style="height: 50px;width: 20px">1</div>
+    <div class="item" style="height: 80px;width: 20px">2</div>
+    <div class="item" style="height: 50px;width: 20px">3</div>
+    <div class="item" style="height: 70px;width: 20px">4</div>
+</div>
+<p>align-items: center;</p>
+<div class="box2">
+    <div class="item" style="height: 50px;width: 20px">1</div>
+    <div class="item" style="height: 80px;width: 20px">2</div>
+    <div class="item" style="height: 50px;width: 20px">3</div>
+    <div class="item" style="height: 70px;width: 20px">4</div>
+</div>
+<p>align-items: stretch;</p>
+<div class="box3">
+    <div class="item" style="height: auto;width: 20px">1</div>
+    <div class="item" style="height: auto;width: 20px">2</div>
+    <div class="item" style="height: auto;width: 20px">3</div>
+    <div class="item" style="height: auto;width: 20px">4</div>
+</div>
+<p>align-items: baseline;</p>
+<div class="box4">
+    <div style="height: auto;width: 100px;font-size:20px;background: chartreuse">
+        <p>text1</p>
+        <p>text2</p>
+    </div>
+    <div style="height: auto;width: 100px;background: saddlebrown;font-size: 10px">
+        <p>text3</p>
+        <p>text4</p>
+    </div>
+    <div style="height: auto;width: 100px;background: red;font-size: 10px">
+        <p>text5</p>
+        <p>text6</p>
+    </div>
+    <div style="height: auto;width: 100px;background: hotpink;font-size: small">
+        <p>text7</p>
+        <p>text8</p>
+    </div>
+</div>
+</body>
+</html>

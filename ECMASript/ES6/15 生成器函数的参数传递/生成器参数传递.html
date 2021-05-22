@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成器参数传递</title>
+</head>
+<body>
+    <script>
+        //创建生成器
+        function * gen(arg) {
+            console.log(arg);
+            let one = yield 111;
+            console.log(one)
+        }
+        //执行获取迭代器对象
+        let internal = gen('AA');
+        //next 方法可以传入实参
+        console.log(internal.next());
+        console.log(internal.next('BB'));
+    </script>
+</body>
+</html>

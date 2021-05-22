@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>babel</title>
+</head>
+<body>
+    <!--
+        babel对ES6模块化代码转换
+        1.安装工具  babel-cli(babel命令行工具) babel-preset-env(预设包 ) browserify(打包工具  Webpack)
+        npm init --yes  //初始化 并生成package.json
+        npm i babel-cli babel-preset-env browserify -D //开发依赖  局部安装
+        2. 语法转换
+        局部安装 npx babel
+        全局安装 babel
+
+        npx babel src/js -d dist/js --presets=babel-preset-env
+        src/js:第一个参数 为源文件目录
+        -d 把转换的结果存在...
+        dist/js: 为转换的结果
+        3.打包 npx browserify dist/js/app.js -o dist/bundle.js
+    -->
+    <!--
+        模块化引入NPM包
+        安装jquery
+                npm i jquery -s
+         app.js ==> import $ form 'jquery'
+         重新打包
+                npx babel src/js -d dist/js --presets=babel-preset-env
+                npx browserify dist/js/app.js -o dist/bundle.js
+     -->
+    <script src="dist/bundle.js">
+
+    </script>
+</body>
+</html>

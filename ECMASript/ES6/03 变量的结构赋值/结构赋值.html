@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量的结构赋值</title>
+</head>
+<body>
+    <script>
+        //数组
+        // const F4 = ['宋小宝','刘能','小沈阳','赵四'];
+        // let [song, liu, xiao, zhao] = F4;
+
+        // console.log(song)
+        // console.log(liu)
+        // console.log(xiao)
+        // console.log(zhao)
+
+        //对象
+        const zhao = {
+            name: '赵本山',
+            age: '不详',
+            xiaopin: function () {
+                console.log('我可以演小品')
+            }
+        };
+
+        let {name, age, xiaopin} = zhao;
+
+        console.log(name)
+        console.log(age)
+        console.log(xiaopin)
+
+        xiaopin()
+    </script>
+</body>
+</html>

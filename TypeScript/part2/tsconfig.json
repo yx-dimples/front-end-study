@@ -1,0 +1,102 @@
+{
+  /*
+  "include"  用来知道哪些ts文件需要被编译
+      路径：*任意文件  **任意目录
+  "exclude"  不想被编译的文件目录
+      默认值：["node_modules","bower_components","jspm_package"]
+  "extends"  定义被继承的配置文件
+      示例："./configs/base"   当前配置文件中会自动包含config目录下base.json中的所有配置信息
+  "files"  指定被编译文件的列表，只有需要编译的文件少时才会用到
+  "compilerOptions" 编译器的选项
+      项目选项：
+          1. target：设置ts代码编译的ES版本
+             选项：'es3', 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'esnext'.
+          2. module: 设置编译后代码使用的模块化系统
+             选项：'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'esnext'
+          3. lib: 指定代码运行时所包含的库（宿主环境）  不需要设置的
+             选项：'es5', 'es6', 'es2015', 'es7', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'esnext', 'dom',
+             'dom.iterable', 'webworker', 'webworker.importscripts', 'webworker.iterable', 'scripthost', 'es2015.core',
+             'es2015.collection', 'es2015.generator', 'es2015.iterable', 'es2015.promise', 'es2015.proxy', 'es2015.reflect',
+             'es2015.symbol', 'es2015.symbol.wellknown', 'es2016.array.include', 'es2017.object', 'es2017.sharedmemory',
+              'es2017.string', 'es2017.intl', 'es2017.typedarrays', 'es2018.asyncgenerator', 'es2018.asynciterable',
+              'es2018.intl', 'es2018.promise', 'es2018.regexp', 'es2019.array', 'es2019.object', 'es2019.string',
+              'es2019.symbol', 'es2020.bigint', 'es2020.promise', 'es2020.sharedmemory', 'es2020.string',
+              'es2020.symbol.wellknown', 'es2020.intl', 'esnext.array', 'esnext.symbol', 'esnext.asynciterable',
+              'esnext.intl', 'esnext.bigint', 'esnext.string', 'esnext.promise', 'esnext.weakref'
+          4. outDir: 用来指定编译后js文件所在的目录
+          5. outFile：将代码合并为一个文件
+                      设置outFile后，所有的全局作用域中的代码会合并到同一个文件中
+          6. allowJs：是否对js文件进行编译
+             选项：true，false
+             默认：false
+          7. checkJs：是否检查js代码使用符合规范
+             选项：true false
+             默认：false
+          8. removeComments：是否移除注释
+             选项：true false
+             默认：false
+          9. noEmit: 不生成编译后文件
+             选项：true false
+             默认：false
+          10. noEmitOnError：当有错误时，不生成编译后文件
+              选项：true false
+              默认：false
+          11. alwaysStrict：以严格模式解析并为每个源文件生成 "use strict"语句
+              选项：true false
+              默认：false
+          12. noImplicitAny：不允许隐式any类型
+              例如：let b; 不指名b的类型就是隐式any
+          13. noImplicitThis：不允许不明确类型的this
+              例如：noImplicitThis: true
+                    function fn2(this: any) {
+                        alert(this);
+                    }
+                    noImplicitThis: false
+                    function fn2() {
+                        alert(this);
+                    }
+          14. strictNullChecks：严格的检查空值
+              例如：strictNullChecks: false
+                    box1 = document.getElementById('box1');  //getElementById 里面的 box1不存在 所有为空值
+                    box1.addEventListener('click',function () {
+                        alert('hello');
+                    });
+
+                    strictNullChecks: true
+                    box1 = document.getElementById('box1');
+                    if(box1 !== null){
+                      box1.addEventListener('click',function () {
+                          alert('hello');
+                      });
+                    }
+                    等价于
+                    box1?.addEventListener('click',function () {
+                        alert('hello');
+                    });
+           15. strict：所有严格检查的总开关
+  */
+  "include": [
+    "./src/**/*/" //根目录下的src文件任意目录任意文件
+  ],
+//  "exclude": [
+//    "./src/hello/**/*" //hello下的文件不需要编译
+//  ],
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "system",
+  //  "lib": ["es6","dom"],
+    "outDir": "./dist",  //编译后的js文件放在根目录下的dist文件下
+    //"outFile": "./dist/app.js" //将编译后的js文件合并到根目录下的dist文件下的app.js
+    "allowJs": true,
+    "checkJs": true,
+    "removeComments": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "strict": false,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true
+
+  }
+}

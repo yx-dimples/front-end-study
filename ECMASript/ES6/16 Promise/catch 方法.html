@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>catch 方法</title>
+</head>
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            setTimeout(() =>{
+                //设置 p 对象的状态为失败，并设置失败的值
+                reject("出错啦");
+            },1000)
+        });
+        // then 方法
+        // p.then(value => {},reason => {
+        //     console.error(reason)
+        // })
+
+        //catch 方法
+        p.catch(reason => {
+            console.warn(reason);
+        })
+    </script>
+</body>
+</html>

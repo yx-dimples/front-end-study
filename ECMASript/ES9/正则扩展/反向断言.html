@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反向断言</title>
+</head>
+<body>
+    <script>
+        //声明字符串
+        let str = 'JS5211314你知道么555啦啦啦';
+        //正向断言
+        const reg = /\d+(?=啦)/;
+        const result = reg.exec(str);
+        console.log(result);
+        //反向断言
+        const reg1 = /(?<=么)\d+/;
+        const result1 = reg1.exec(str);
+        console.log(result1);
+    </script>
+</body>
+</html>

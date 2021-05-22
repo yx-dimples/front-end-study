@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let</title>
+</head>
+<body>
+
+    <script>
+        //声明变量
+        let a;
+        let d,b,c;
+        let e=100;
+        let f=413, g='hello', h=[];
+
+        //变量不能重复声明
+       // let star ='王一博';
+        //let star= '肖战';
+
+        //块儿级作用域  全局，函数，eval
+        // {
+        //     let girl ='周扬青'
+        // }
+        // console.log(girl)
+
+        //不存在变量提升
+        // console.log(song)
+        // let song = '恋爱达人'
+
+        //不影响作用链
+        {
+            let school ='宜宾学院'
+            function fn() {
+                console.log(school)
+            }
+            fn()
+        }
+    </script>
+
+</body>
+</html>

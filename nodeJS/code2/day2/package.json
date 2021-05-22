@@ -1,0 +1,23 @@
+{
+  "name": "code2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "a": "echo 666",
+    "start": "node mime_test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "ejs": "^3.1.6",
+    "jade": "^1.11.0",
+    "mime": "^2.5.2"
+  },
+  "devDependencies": {
+    "jquery": "^3.6.0"
+  },
+  "description": ""
+}

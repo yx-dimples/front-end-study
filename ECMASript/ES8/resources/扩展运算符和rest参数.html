@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象展开</title>
+</head>
+<body>
+    <script>
+        // function connect({host,port,username,password}) {
+        //     console.log(host);
+        //     console.log(port);
+        //     console.log(username);
+        //     console.log(password);
+        // }
+        // connect({
+        //     host: '127.0.0.1',
+        //     port: 4000,
+        //     username: 'root',
+        //     password: 'root',
+        // })
+
+        // function connect({host,port,...user}) {
+        //     console.log(host);
+        //     console.log(port);
+        //     console.log(user);
+        // }
+        // connect({
+        //     host: '127.0.0.1',
+        //     port: 4000,
+        //     username: 'root',
+        //     password: 'root',
+        // })
+
+        const skillOne = {
+            q: '天音波'
+        };
+        const skillTwo = {
+            w: '金钟罩'
+        };
+        const skillThree = {
+            e: '天雷破'
+        };
+        const skillFore = {
+            r: '猛虎摆尾'
+        };
+
+        const mangseng = {...skillOne,...skillTwo,...skillThree,...skillFore};
+        console.log(mangseng);
+    </script>
+</body>
+</html>

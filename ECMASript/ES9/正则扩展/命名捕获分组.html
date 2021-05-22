@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>命名捕获分组</title>
+</head>
+<body>
+    <script>
+        let str = '<a href="http://www.baidu.com">百度</a>';
+        const reg =  /<a href="(.*)">(.*)<\/a>/;
+        const result = reg.exec(str);
+        console.log(result);
+
+        let str1 = '<a href="http://www.baidu.com">百度</a>';
+        const reg1 =  /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
+        const result1 = reg1.exec(str1);
+        console.log(result1);
+
+    </script>
+</body>
+</html>

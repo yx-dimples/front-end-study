@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div0{
+            display: flex;
+            width: 400px;
+            height: 500px;
+            background: violet;
+        }
+        #div0 div{
+            width: 200px;
+            height: 200px;
+            /*flex-basis: 30%;  !* 400*30% *!*/
+        }
+        #div0 div:nth-child(1){
+            flex-basis: 50px; /* 设置此属性后，width失效 */
+            background: blue;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        #div0 div:nth-child(2){
+            flex-basis: 100px;
+            background: rosybrown;
+            flex-grow: 5;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="div0">
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
+
+<!--
+其他属性
+
+    属性值                       作用
+       flex-basis                 设置弹性盒伸缩基准值
+       flex-grow                  设置弹性盒子的扩展比率
+       flex-shrink                设置弹性盒子的缩小比例
+       flex                       flex-grow、flex-shrink、flex-basis的缩写
+
+-->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>应用</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        //1.数组的合并
+        const as = ['01','02','03'];
+        const ab = ['04','05','06'];
+        //ES5用法
+        //const add = as.concat(ab);
+        //扩展运算符用法
+        const add = [...as,...ab]
+        console.log(add);
+        //2.数组的克隆
+        const san = ['A','B','C'];
+        const si = [...san];
+        console.log(si);
+        //3.讲伪数组转换为真正的数组
+        const divs = document.querySelectorAll('div');
+        const divArr = [...divs];
+        console.log(divArr);
+
+    </script>
+</body>
+</html>

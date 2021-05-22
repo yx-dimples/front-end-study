@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>集合</title>
+</head>
+<body>
+    <script>
+        //声明一个 Set
+        let s = new Set();
+        console.log(s);
+
+        let s2 = new Set(['12','123','1231']);
+        console.log(s2);
+
+        //个数
+        console.log(s2.size);
+        //新的元素
+        console.log(s2.add('我是新的元素'));
+        //删除元素
+        console.log(s2.delete('12'));
+        //检测
+        console.log(s2.has('123'));
+        //清空
+        console.log(s2.clear());
+        //遍历
+        let s3 = new Set(['123','130']);
+        for (let v of s3){
+            console.log(v);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数值扩展</title>
+</head>
+<body>
+    <script>
+        //0. Number.EPSILON  最小精度
+        // function equal(a,b) {
+        //     if (Math.abs(a-b) < Number.EPSILON)
+        //         return true;
+        //     else
+        //         return false;
+        // }
+        // console.log(equal(0.1+0.2,0.3));
+
+        //1. 进制
+        // let b = 0b0101;
+        // let o = 0o777;
+        // let d = 100;
+        // let x = 0xff;
+        // console.log(b);
+        // console.log(o);
+        // console.log(d);
+        // console.log(x);
+
+        //2.Number.isFinite 检测是否为有限数
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100/0));
+        // console.log(Number.isFinite(Infinity));
+
+        //3.Number.isNaN 检测是否为 NaN
+        //console.log(Number.isNaN(1122));
+
+        //4.Number.parseFloat Number.parseInt 字符串转浮点数 整数
+        // console.log(Number.parseFloat('21.12Yangxue'));
+        // console.log(Number.parseInt('12xue ascxs'));
+
+        //5.Number.isInteger 检测是否为一个整数
+        // console.log(Number.isInteger(43));
+        // console.log(Number.isInteger(2.12))
+
+        //6.Math.trunc 将数字的小数部分抹掉
+        //console.log(Math.trunc(3.98));
+
+        //6.Math.sign 判断一个数到底是正数 负数 零  整数：1 负数：-1 零：0
+        console.log(Math.sign(0));
+        console.log(Math.sign(2));
+        console.log(Math.sign(-12));
+    </script>
+</body>
+</html>
